@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Staff {
+            constructor(fullname, email) {
+                this.fullname = fullname;
+                this.email = email;
+                this.setFullname = function (fullname) {
+                    this.fullname = fullname
+
+                }
+                this.getFullname = function () {
+                    return this.fullname
+                }
+                this.setEmail = function (email) {
+                    this.email = email
+
+                }
+                this.getEmail = function () {
+                    return this.email
+                }
+            }
+        }
+        var david = new Staff("David", "david@gmail.com");
+        david.setFullname("David Do");
+        david.setEmail("david.do@gmail.com");
+        document.write(david.fullname.toString());
+        document.write('<br>');
+        document.write(david.email.toString());
+        document.write('<br>');
+        document.write('<br>');
+        var Staffs = [david,
+            new Staff("Luyn", "hvl@gmail.com"),
+            new Staff("Hoan", "hoan@gmail.com"),
+            new Staff("Cuong", "cuong@gmail.com"),
+
+        ]
+        for (let i = 0; i < Staffs.length; i++) {
+            document.write(Staffs[i].fullname.toString());
+            document.write('<br>');
+            document.write(Staffs[i].email.toString());
+            document.write('<br>');
+        }
+    </script>
+</body>
+
+</html>
